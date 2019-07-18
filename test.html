@@ -3,11 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script type="text/javascript">
+        $(function(){
+            var text1 = $('.text1');
+            text1.requestFocus();
+            text1.focus(function(){
+                text1.val('포커스를 얻었습니다.');
+            });
+            text1.blur(function(){
+                text1.val('포커스를 벗어났습니다. .');
+
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>test</h1>
-    <input type="text" name="1" size="15" maxlength="30" style="ime-mode:active;" value=""  >
+    <input type="text" class="text1" value="input your name" />
+    <input type="text" class="text2" value="input your id" />
 
+    <script>
 
+    </script>
 </body>
 </html>
