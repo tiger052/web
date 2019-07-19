@@ -6,15 +6,16 @@
 </head>
 <body>
     <h1>test</h1>
-    <input type="text" class="text1" value="input your name" autofocus onfocus="test()"/>
     <script>
-
-        function test() {
-document.querySelector('body').style.backgroundColor='black';
-            $('#text1').value = "gggg";
-        }
-
-            $(this).parent().siblings('div.bottom').find("input.post").focus();
+        $(function(){
+            $('#camera').change(function(e){
+                $('#pic').attr('src', URL.createObjectURL(e.target.files[0]));
+            });
+        });
     </script>
+    <input type="file" id="camera" name="camera" capture="camera" accept="image/*" />
+    <br/>
+    <img id="pic" style="width:100%;" />
+
 </body>
 </html>
