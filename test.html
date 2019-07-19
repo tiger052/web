@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 <body>
     <h1>test</h1>
@@ -30,13 +32,18 @@
 
 
     <script>
-
+        $("#hiddenInput").keyup(function(e) {
+            if (e.which !== 0) {
+                var character = String.fromCharCode(e.which));
+                 doSomethingWith(character);
+            }
+        });
     </script>
     <input type="file" id="camera" name="camera" capture="camera" accept="image/*" />
     <input type="button" id="test" value="test" onclick="camera()" />
     <br/>
     <img id="pic" style="width:100%;" />
-
+    <input id="hiddenInput" type="text" name="hiddenInput" autofocus />
 
 </body>
 </html>
