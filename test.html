@@ -13,27 +13,29 @@
             document.querySelector('body').style.backgroundColor='black';
             //$('#text1').value = "gggg";
 
-            $('#camera').change(function(e){
-                $('#pic').attr('src', URL.createObjectURL(e.target.files[0]));
-            });
+
         }
-
-    </script>
-
-
-    <script>
         $(function(){
             $('#camera').change(function(e){
                 $('#pic').attr('src', URL.createObjectURL(e.target.files[0]));
             });
         });
+
+        function camera() {
+            $('#camera').change(function(e){
+                $('#pic').attr('src', URL.createObjectURL(e.target.files[0]));
+            });
+        }
+    </script>
+
+
+    <script>
+
     </script>
     <input type="file" id="camera" name="camera" capture="camera" accept="image/*" />
     <br/>
     <img id="pic" style="width:100%;" />
-
-
-    출처: https://cofs.tistory.com/180 [CofS]
+    <input type="button" id="test" name="test" onclick="camera()" />
 
 </body>
 </html>
