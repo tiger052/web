@@ -1,0 +1,37 @@
+{
+  "client": [
+    {
+      "services": {
+        "appinvite_service": {
+          "status": 1
+        }, 
+        "analytics_service": {
+          "status": 0
+        }
+      }, 
+      "oauth_client": [
+        {
+          "client_id": "234258048251-fl6q3989vmviq1imguapon33htq13q58.apps.googleusercontent.com"
+        }
+      ], 
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9S53BHGXj_ZGTW0SFp3BzH2TDTd7x07E"
+        }
+      ], 
+      "client_info": {
+        "mobilesdk_app_id": "1:234258048251:ios:8015b396f3fdb78de4fc5e", 
+        "android_client_info": {
+          "package_name": "com.j1.touchcounter"
+        }
+      }
+    }
+  ], 
+  "configuration_version": "1", 
+  "project_info": {
+    "storage_bucket": "touchcounter-fba40.appspot.com", 
+    "project_id": "touchcounter-fba40", 
+    "firebase_url": "https://touchcounter-fba40.firebaseio.com", 
+    "project_number": "234258048251"
+  }
+}
