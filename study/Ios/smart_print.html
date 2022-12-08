@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>smart_print</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <script>
+      function callNative() {
+      	try {
+      		webkit.messageHandlers.callbackHandler.postMessage("MessageBody");
+      	} catch(err) {
+      		alert(err);
+      	}
+      }
+
+      function redHeader() {
+      	alert('redHeader() CALL');
+      	document.querySelector('h1').style.color = "red";
+      }
+
+      function blueHeader() {
+      	alert('blueHeader() CALL');
+      	document.querySelector('h1').style.color = "blue";
+      }
+
+    </script>
+    <font size = 20>
+    <h1> smart print web page</h1><br><br>
+
+    <h3> 1. Direct Function Call 방식 </h3><br><br>
+
+    <input type="button" id="test" value="제작 하기" onclick="callNative()" /><br><br><br>
+    <input type="button" id="redHeader" value="call redHeader" onclick="redHeader()" /><br><br><br>
+    <input type="button" id="blueHeader" value="call blueHeader" onclick="blueHeader()" /><br><br><br>
+
+    <h3> 2. Url Sceme 방식 - printTest://</h3><br><br>
+    <a href="printTest://login/?id=tiger&password=1111"> Sceme Test </a><br><br>
+
+    <h3> 3. 일반 Http Link </h3><br><br>
+    <a href="http://naver.com"> Go Naver </a>
+  </body>
+</html>
