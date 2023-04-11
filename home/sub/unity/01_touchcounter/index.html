@@ -4,22 +4,30 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | TouchCounter</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/touchcounter.json", {onProgress: UnityProgress});
-    </script>
   </head>
-  <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 600px; height: 960px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">TouchCounter</div>
-      </div>
-    </div>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=800 height=1280 style="width: 800px; height: 1280px; background: #231F20"></canvas>
+    <script src="Build/Webgl.loader.js"></script>
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Webgl.data.gz",
+        frameworkUrl: "Build/Webgl.framework.js.gz",
+        codeUrl: "Build/Webgl.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "j1",
+        productName: "TouchCounter",
+        productVersion: "1.0.7",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
   </body>
 </html>
