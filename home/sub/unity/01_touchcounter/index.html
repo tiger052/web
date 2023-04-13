@@ -6,7 +6,11 @@
     <title>Unity WebGL Player | TouchCounter</title>
   </head>
   <body style="text-align: center">
-    <canvas id="unity-canvas" width=800 height=1280 style="width: 800px; height: 1280px; background: #231F20"></canvas>
+    <!-- 반응형 처리 -->
+    <div id="unity-container" style="position: absolute; width: 100%; height: 100%">
+      <canvas id="unity-canvas" width=800 height=1280 style="width: 100%; height: 100%"></canvas>
+    </div>
+    <!--<canvas id="unity-canvas" width=800 height=1280 style="width: 800px; height: 1280px; background: #231F20"></canvas>-->
     <script src="Build/Webgl.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -18,9 +22,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/Webgl.data.gz",
-        frameworkUrl: "Build/Webgl.framework.js.gz",
-        codeUrl: "Build/Webgl.wasm.gz",
+        dataUrl: "Build/Webgl.data.unityweb",
+        frameworkUrl: "Build/Webgl.framework.js.unityweb",
+        codeUrl: "Build/Webgl.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "j1",
         productName: "TouchCounter",

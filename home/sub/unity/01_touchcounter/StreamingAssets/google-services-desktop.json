@@ -1,37 +1,47 @@
 {
+  "project_info": {
+    "project_number": "234258048251",
+    "firebase_url": "https://touchcounter-fba40.firebaseio.com",
+    "project_id": "touchcounter-fba40",
+    "storage_bucket": "touchcounter-fba40.appspot.com"
+  },
   "client": [
     {
-      "services": {
-        "appinvite_service": {
-          "status": 1
-        }, 
-        "analytics_service": {
-          "status": 0
+      "client_info": {
+        "mobilesdk_app_id": "1:234258048251:android:41068b6d884342d3e4fc5e",
+        "android_client_info": {
+          "package_name": "com.J1.touchcounter"
         }
-      }, 
+      },
       "oauth_client": [
         {
-          "client_id": "234258048251-fl6q3989vmviq1imguapon33htq13q58.apps.googleusercontent.com"
+          "client_id": "234258048251-bb4sjfdmsv2rf9lrk85nidl6mgkpl4d3.apps.googleusercontent.com",
+          "client_type": 3
         }
-      ], 
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyA9S53BHGXj_ZGTW0SFp3BzH2TDTd7x07E"
+          "current_key": "AIzaSyCL98KR6pavWRcPinRRQ49qwkdi7-r5e28"
         }
-      ], 
-      "client_info": {
-        "mobilesdk_app_id": "1:234258048251:ios:8015b396f3fdb78de4fc5e", 
-        "android_client_info": {
-          "package_name": "com.j1.touchcounter"
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234258048251-bb4sjfdmsv2rf9lrk85nidl6mgkpl4d3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "234258048251-fl6q3989vmviq1imguapon33htq13q58.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.j1.touchcounter"
+              }
+            }
+          ]
         }
       }
     }
-  ], 
-  "configuration_version": "1", 
-  "project_info": {
-    "storage_bucket": "touchcounter-fba40.appspot.com", 
-    "project_id": "touchcounter-fba40", 
-    "firebase_url": "https://touchcounter-fba40.firebaseio.com", 
-    "project_number": "234258048251"
-  }
+  ],
+  "configuration_version": "1"
 }
